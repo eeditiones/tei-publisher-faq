@@ -1,0 +1,14 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "TEI Publisher FAQ"
+theme = "learn"
+
+[params]
+    themeVariant = "teipublisher"
+    siteLandingPage = "https://teipublisher.com"
+    landingPageName = "<i class='fas fa-home'></i> Frequently Asked Questions"
+
+[[menu.shortcuts]]
+    name = "<i class='fas fa-tags'></i> Tags"
+    url = "/tags"
+    weight = 30
