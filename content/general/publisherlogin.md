@@ -1,5 +1,5 @@
 ---
-title: "Default TEI Publisher log in"
+title: "Log in"
 date: 2020-12-13
 ---
 
