@@ -12,3 +12,6 @@ theme = "learn"
     name = "<i class='fas fa-tags'></i> Tags"
     url = "/tags"
     weight = 30
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
