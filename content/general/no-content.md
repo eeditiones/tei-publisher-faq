@@ -2,6 +2,7 @@
 title: "Why does my document show 'server did not return any content' error message?"
 menuTitle: "'Server did not return any content'"
 date: 2020-12-15T18:32:11+01:00
+tags: ["webcomponents", "pb-view"]
 ---
 
 Please bear in mind that while TEI Publisher aims to be a universal tool, the specific components may make certain assumptions about data they are getting and if your documents do not follow the same encoding conventions it may be required to adjust parameters passed to the components from the page template - or add required information in the document.

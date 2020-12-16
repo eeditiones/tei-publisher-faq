@@ -1,7 +1,7 @@
 +++
 title = "Page view doesn't work"
 date =  2020-12-16T22:15:07+01:00
-tags = []
+tags = ["navigation", "pb-view"]
 +++
 
 Displaying documents page by page requires that page breaks are encoded. In TEI you are expected to explicitly place `pb` elements where each page begins.
