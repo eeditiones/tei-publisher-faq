@@ -1,6 +1,7 @@
 ---
 title: "Custom Event Wiring"
 date: 2020-12-16T15:32:18+01:00
+tags: ['webcomponents', 'events']
 ---
 
 ## Can I connect components via custom code?
@@ -69,3 +70,7 @@ window.addEventListener('load', () =>
 );
 </script>
 ```
+
+### Demo
+
+You can find a demo of the code covered in this article in the [pb-components documentation](https://unpkg.com/@teipublisher/pb-components@latest/dist/api.html#pb-collapse.2).
