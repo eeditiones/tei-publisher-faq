@@ -1,0 +1,38 @@
+{{ partial "header.html" . }}
+
+{{ .Content }}
+
+
+{{ range first 10 .Pages }}
+    <article class="summary">
+      <!-- this <div> includes the title summary -->
+      <div>
+        <header>
+            <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+            {{ if .Params.tags }}
+            <div class="tags">
+                {{range .Params.tags}}
+                <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                {{end}}
+            </div>
+            {{end}}
+        </header>
+        {{ .Summary }}
+      </div>
+      {{ if .Truncated }}
+      <!-- This <div> includes a read more link, but only if the summary is truncated... -->
+      <div>
+        <a href="{{ .RelPermalink }}">Read More…</a>
+      </div>
+      {{ end }}
+    </article>
+{{ end }}
+
+<footer class="footline">
+	{{with .Params.LastModifierDisplayName}}
+	    <i class='fas fa-user'></i> <a href="mailto:{{ $.Params.LastModifierEmail }}">{{ . }}</a> {{with $.Date}} <i class='fas fa-calendar'></i> {{ .Format "02/01/2006" }}{{end}}
+	    </div>
+	{{end}}
+</footer>
+
+{{ partial "footer.html" . }}

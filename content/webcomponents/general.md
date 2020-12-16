@@ -1,11 +1,10 @@
 ---
-title: "General Questions"
+title: "Why is a request sent to `/api/version` and `/login` when the page loads?"
+menuTitle: "Extra requests"
 date: 2020-12-11T20:35:42+01:00
 tags: ["webcomponents", "pb-page"]
 weight: 1
 ---
-
-## Why is a request sent to `/api/version` and `/login` when the page loads?
 
 The webcomponent library needs to figure out with which version of TEI Publisher it is communicating on the server side. It thus sends two requests while initializing:
 

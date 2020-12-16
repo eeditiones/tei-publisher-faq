@@ -122,3 +122,16 @@ a:hover {
     background-color: #35424b;
     border-bottom: 4px solid #35424b;
 }
+
+.summary {
+    margin-bottom: 1em;
+}
+
+.summary header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary header h4 {
+    margin-top: 0;
+}

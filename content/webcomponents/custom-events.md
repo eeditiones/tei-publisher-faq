@@ -1,10 +1,9 @@
 ---
-title: "Custom Event Wiring"
+title: "Can I connect components via custom code?"
+menuTitle: "Custom Event Wiring"
 date: 2020-12-16T15:32:18+01:00
 tags: ['webcomponents', 'events']
 ---
-
-## Can I connect components via custom code?
 
 There might be cases where you would like to make a component react to changes in another component, but TEI Publisher does not provide the necessary connection by default. Components in Publisher mainly communicate via [signals sent into channels](https://teipublisher.com/exist/apps/tei-publisher/doc/documentation.xml?id=webcomponents-communication). You can thus always connect two components via custom code by listening to events sent by a first component and - when received - trigger another component.
 

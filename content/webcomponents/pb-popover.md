@@ -1,11 +1,10 @@
 ---
-title: "Popovers"
+title: "Can alternate content be loaded asynchronously?"
+menuTitle: "Asynchronous Popover"
 date: 2020-12-12T14:21:16+01:00
 weight: 2
 tags: ['webcomponents', 'pb-popover']
 ---
-
-## Can alternate content be loaded asynchronously?
 
 If you output a lot of **alternate** blocks within your ODD, e.g. for places, people or terms, it can slow down rendering of the text, in particular, if the content to be shown as alternate requires further processing or is loaded from an external database system via an API.
 

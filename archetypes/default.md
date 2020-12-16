@@ -1,6 +1,8 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
+menuTitle: ""
 date: {{ .Date }}
-draft: true
+tags: []
 ---
 
+Your content here
