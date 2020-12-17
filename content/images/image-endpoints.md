@@ -5,7 +5,7 @@ date: 2020-12-17T11:09:37+01:00
 tags: ["iiif", "pb-facsimile", "pb-facs-link"]
 ---
 
-To correctly connect TEI Publisher's `<pb-facsimile>` component with a IIIF server, it's best to first try in the browser and access one image you know should exist. For any image, the first thing the IIIF viewer requests from the server is the `info.json` containing metadata about the image. You should thus find out how to access this `info.json` from your server.
+To correctly connect TEI Publisher's `<pb-facsimile>` component with a IIIF server, it's best to first try in the browser and access one image you know should exist. For any image, the first thing the IIIF viewer requests from the server is the `info.json` containing metadata about the image. You should thus find out how to access this `info.json` for the image on your server.
 
 For example, the TEI Publisher demo loads the facsimile images for the Shakespeare from an URL as follows:
 
