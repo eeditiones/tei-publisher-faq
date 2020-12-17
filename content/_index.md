@@ -20,11 +20,11 @@ The website is directly generated from the markdown files stored in the `content
 
 You can make changes to any existing page by clicking on the **Edit this page** link at the top right of the page. All you need is a GitHub user account. Clicking the link will open the corresponding markdown file on github for editing and you can start applying your changes immediately.
 
-To add new files, navigate to the correct subdirectory in the [github repository](https://github.com/eeditiones/tei-publisher-faq/tree/master/content) and press the **Add file** button on the top right above the directory listing.
+To add new files, navigate to the correct subdirectory in the [github repository](https://github.com/eeditiones/tei-publisher-faq/tree/master/content) and press the **Add file** button on the top right above the directory listing. Files should be markdown, i.e. the file name must end with `.md`.
 
-Once you are done with editing, fill out the **Propose changes** form at the bottom of the page and click the green button. Changes will not go life immediately. Instead, you are asked to create a so called *pull request*, which will then be reviewed by a core team member. You do not need to fill out anything if you already provided a description of your changes, so just press the green **Create pull request** button.
+Once you are done with editing, fill out the **Propose changes** form at the bottom of the page and click the green button. Changes will not go live immediately. Instead, you are asked to create a so called *pull request*, which will then be reviewed by a core team member. You do not need to fill out anything if you already provided a description of your changes, so just press the green **Create pull request** button (also on the followup page).
 
-To work on larger, new articles we recommend to write your text offline first in an editor of your choice. Most text editors (including oXygen) provide some support for writing markdown.
+To work on larger, new articles we recommend to write your text offline first in an editor of your choice. Most text editors (including oXygen) provide some support for writing markdown. You can then upload your new file using **Add files** (see above).
 
 ### Forking the repo
 
