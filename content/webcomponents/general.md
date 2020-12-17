@@ -1,6 +1,6 @@
 ---
 title: "Why is a request sent to `/api/version` and `/login` when the page loads?"
-menuTitle: "Extra requests"
+menuTitle: "Requests to /api/version"
 date: 2020-12-11T20:35:42+01:00
 tags: ["webcomponents", "pb-page"]
 weight: 1
