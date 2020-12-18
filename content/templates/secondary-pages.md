@@ -34,7 +34,7 @@ You may then link to the newly added document, e.g. from the menubar using a sta
 To ensure the link also works when clicked from a page further below the application root, we're using `${app}` together with the `pages:parse-params` template instruction. The variable will be replaced with the root URL of the app by server-side processing.
 {{% /notice %}}
 
-## Using Markdown
+### Using Markdown
 
 Starting with TEI Publisher 7.0.0, you may also use Markdown for auxiliary pages. Markdown is a plain text format and quicker to write than TEI or Docbook. For example, all the pages in this FAQ are written in markdown.
 
