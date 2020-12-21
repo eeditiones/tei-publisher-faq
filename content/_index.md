@@ -8,11 +8,11 @@ chapter = false
 
 This website collects frequently asked questions around TEI Publisher, TEI encoding, text editing and development workflows.
 
-## Proposing new entries
+## How to contribute to this FAQ
+
+### Proposing new entries
 
 If you'd like to propose an entry not having it all prepared yet, please consider creating a [ticket](https://github.com/eeditiones/tei-publisher-faq/issues) in the issue tracker. You can suggest a topic, solicit opinions and also subsequently collaborate and discuss the shape of the corresponding article in there.
-
-## How to contribute to this FAQ
 
 The website is directly generated from the markdown files stored in the `content` subdirectory of the [github repository](https://github.com/eeditiones/tei-publisher-faq/tree/master/content). All contributions are welcome.
 
