@@ -189,9 +189,7 @@ We're calling `tpu:parse-pi` to retrieve the specific configuration to be used f
 
 The second argument to `$pm-config:web-transform` is a map of parameters which will be forwarded to the ODD. Use this to pass external processing information. In the example above, we're passing `"headers": "short"`, which from within an ODD processing model rule would be available as `$parameters?headers='short'`. All the default ODDs in TEI Publisher check this particular parameter to output a short summary of metadata about the document, as seen in the browsing view of TEI Publisher. But feel free to add your own parameters and processing logic here.
 
-## Older versions of TEI Publisher
-
-<a id="old-publisher"></a> 
+## Older versions of TEI Publisher <a id="old-publisher"></a>
 
 Versions of TEI Publisher before 7 do not come with an abstract API. Instead they simply call XQuery code or HTML templates on the server.
 
