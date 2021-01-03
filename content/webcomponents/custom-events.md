@@ -40,7 +40,7 @@ Important here is the `key` property in the event details: within TEI Publisher,
 
 ### Using utility methods
 
-Beginning with version **1.13.0** of pb-components, there's a utility class which can be used to simplify the code above:
+Beginning with version **1.14.1** of pb-components ([check your version](/webcomponents/version-upgrade)), there's a utility class which can be used to simplify the code above:
 
 ```html
 <script>
@@ -50,23 +50,36 @@ window.addEventListener('load', () =>
 </script>
 ```
 
-The arguments are:
+The arguments to `subscribe` are:
 
-1. the name of the event
-2. the channel to emit to (or null for the default channel)
-3. a callback function to be called when the event is triggered
-4. should the event handler fire only once?
+1. the **name** of the event: you can find the different events emitted by each component in the [component docs](https://unpkg.com/@teipublisher/pb-components@latest/dist/api.html)
+2. the **channel(s)** to subscribe to. Can also be null for the default channel. To subscribe to multiple channels at once, pass in an array.
+3. a **callback function** to be called when the event is triggered. This will receive the event as parameter.
+4. should the event handler fire only **once**?
 
 By passing 'true' for the fourth argument, we prevent the `pb-update` event being resent whenever the user expands the collapse again. Loading the content of the collapse once should be enough.
 
-As an alternative to passing in a callback function, `pbEvents.subscribe` also returns a `Promise`. So here's another formulation of the same:
+Alternatively you can use the `subscribeOnce` function if you would like the event handler to only execute once. This function returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), which resolves when the event is received:
 
 ```html
 <script>
 window.addEventListener('load', () =>
-    pbEvents.subscribe('pb-collapse-open', 'meta', null, true)
+    pbEvents.subscribeOnce('pb-collapse-open', 'meta')
         .then(() => pbEvents.emit('pb-update', 'meta'))
 );
+</script>
+```
+
+The first two arguments for `emit` are the same as for `subscribe`. The third argument can be used to pass data to the event. The event handler can access this information in the `ev.detail` property as in the following snippet:
+
+```html
+<script>
+pbEvents.subscribe('pb-update', ['transcription', 'translation'], (ev) => {
+    console.log(ev.detail); // should include foo: 'baz'
+}, true);
+pbEvents.emit('pb-update', 'translation', {
+    foo: 'baz'
+});
 </script>
 ```
 
