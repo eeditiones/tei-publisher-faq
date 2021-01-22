@@ -27,3 +27,15 @@ To work on larger, new articles we recommend to write your text offline first in
 ### Forking the repo
 
 To work on more than just one article at a time, it is better to fork the [faq repository](https://github.com/eeditiones/tei-publisher-faq) and clone it to your local machine. Once you're done, commit the changes to your fork and open a *pull request* on the source repository.
+
+To preview your changes locally, you need to install a software package called [hugo](https://gohugo.io/getting-started/installing). Next, clone the repository to your local machine, cd into it and run the following command once to load the require theme for the FAQ:
+
+```sh
+git submodule update --init --recursive
+```
+
+You may then start a local hugo server with
+
+```sh
+hugo server
+```
