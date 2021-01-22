@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://faq.teipublisher.com/"
 languageCode = "en-us"
 title = "TEI Publisher FAQ"
 theme = "learn"
