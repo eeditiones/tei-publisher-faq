@@ -32,11 +32,15 @@ To look up a person by `@xml:id` in the separate authority file, you just need t
 ```xml
 <model behaviour="alternate">
     <param name="default" value="."/>
-    <param name="alternate" value="id(substring-after(@ref, '#'), collection('/db/apps/serafin/data/auxiliary'))"/>
+    <param name="alternate" value="id(substring-after(@ref, '#'), doc('/db/apps/serafin/data/auxiliary/authorityList.xml'))"/>
     <outputRendition xml:space="preserve">
     color: #1565c0;
     </outputRendition>
 </model>
 ```
 
-Here we search through an entire collection, but you can as well limit it to a single document by using the `doc()` function instead of `collection()`.
+Here we search through a single document, but you can as well access any node by id using the `collection()` function instead of `doc()`, just the syntax will be slightly different.
+
+```xquery
+collection('/db/apps/serafin/data/auxiliary/authorityList.xml')/id(substring-after(@ref, '#'))
+```
