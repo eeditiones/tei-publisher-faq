@@ -5,7 +5,7 @@ tags = ["proxy", "api"]
 +++
 
 If eXist-db is hosted behind a proxy you might encounter issues with the API. Instead of the desired content you get "the server did not return any content" and several 404 errors on the console.  
-You have to tell you proxy to avoid decoding the query prameters:
+You have to tell the proxy to avoid decoding the query prameters:
   - nginx
   ```
   location / {
