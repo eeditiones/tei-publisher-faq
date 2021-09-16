@@ -22,3 +22,5 @@ Within your ODD transformation, you could then output a `pb-facs-link` wherever 
 ```
 
 This does not differ from using IIIF - just that images will be resolved statically against the base URI instead of going through the IIIF protocol. `pb-facsimile` will still allow you to zoom into the image and pan it with the mouse.
+
+For sure, images can be hosted anywhere and do not need to be stored on TEI Publisher. Just change the `base-uri` to point to the base URL you want to retrieve images from.
