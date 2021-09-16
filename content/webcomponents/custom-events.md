@@ -85,4 +85,25 @@ pbEvents.emit('pb-update', 'translation', {
 
 ### Demo
 
-You can find a demo of the code covered in this article in the [pb-components documentation](https://unpkg.com/@teipublisher/pb-components@latest/dist/api.html#pb-collapse.2).
+You can find a demo of the code covered above in the [pb-components documentation](https://unpkg.com/@teipublisher/pb-components@latest/dist/api.html#pb-collapse.2).
+
+### Accessing the Content of a `pb-view`
+
+Quite often you may want to inspect the HTML rendition of your TEI as displayed in a `pb-view`, e.g. to add event listeners, extract images etc. Unfortunately, `pb-view` renders the content into the so-called *shadow DOM*, i.e. a private section which is not visible to the world outside the `pb-view`. The advantage of this approach is that anything inside the *shadow* will not interfere with the rest of the page, allowing us to display completely heterogenous documents on the same page. The disadvantage is that code outside the `pb-view` can not "look into" the component.
+
+Fortunately it is possible though to intercept the events `pb-view` emits. Of particularily interest is the `pb-update` event: this event is emitted by `pb-view` whenever it has finished loading new content, and the event details include a reference to the actual content rendered by the component. You can access it as an HTML element in `ev.detail.root`.
+
+For example, let's assume that our ODD transformation outputs an HTML element with class `credits`. We don't want to show this as part of the rendered text though, but instead display it prominently on the top of the page. This can be done as follows:
+
+```javascript
+pbEvents.subscribe("pb-update", "transcription", (ev) => {
+    const credits = ev.detail.root.querySelector(".credits");
+    const creditsTarget = document.getElementById("credits");
+    if (credits && creditsTarget) {
+      creditsTarget.innerHTML = credits.innerHTML;
+    }
+    credits.style.display = 'none';
+  });
+```
+
+The code first tries to find an element with CSS class `.credits`. If it exists, it's content is copied into another element with id `credits` contained somewhere else on the page. The original element is then hidden.
