@@ -3,9 +3,9 @@ title: "How to configure Tuttle?"
 menuTitle: "Configuration"
 date: 2020-12-11T20:35:42+01:00
 tags: ["git", "tuttle", "github","gitlab","configuration"]
-weight: 4
+weight: 3
 ---
-Tuttle is configured in `modules/config.xqm` in the TEI-Publisher instance.
+Tuttle is configured in `modules/config.xqm` in the TEI Publisher instance.
 
 Below is an example configuration that shows an example for either Github and Gitlab. Due to the 
 different API of these services the configuration differs sligtly. See parameter description

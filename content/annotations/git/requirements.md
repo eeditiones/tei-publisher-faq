@@ -3,7 +3,7 @@ title: "What is needed to use Tuttle?"
 menuTitle: "Requirements"
 date: 2021-11-03T15:15:41+01:00
 tags: ["requirements","setup","Github","Gitlab"]
-weight: 3
+weight: 2
 ---
 
 
@@ -19,9 +19,9 @@ is needed. This can be obtained from the respective service-provider.
  
 See ['how to get an auth token'](/git/auth/)
 
-### 3. TEI-Publisher
+### 3. Tuttle application
 
-Tuttle is integrated with TEI-Publisher. In order to use it a TEI-Publisher instance is required.
+Tuttle is a separate eXist-db app and can be installed from the public repository of eXist-db by using the Dashboard app.
 
 ### 4. Data collection
 
