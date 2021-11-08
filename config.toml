@@ -8,7 +8,6 @@ theme = "learn"
     siteLandingPage = "https://teipublisher.com"
     landingPageName = "<i class='fas fa-home'></i> Frequently Asked Questions"
     editURL = "https://github.com/eeditiones/tei-publisher-faq/edit/master/content/"
-
 [[menu.shortcuts]]
     name = "<i class='fas fa-tags'></i> Tags"
     url = "/tags"

@@ -17,3 +17,32 @@ of data collections between TEI Publisher instances and a Git repository.
 projects to seemlessly add version control to their data.
 
 
+## Modes of operation
+
+Tuttle offers 2 modes of operation:
+* 'Git2DB'
+* 'App2Git'
+
+{{% notice note %}}
+in the pictures below the Github Logo is used but Gitlab can be used the same way
+{{% /notice %}}
+
+### Git to DB
+
+In this scenario users use their own tools to edit documents and push their changes to a git repository.
+
+With Tuttle enabled the configured eXist-db collection can be updated completely or incrementally on request
+or by using a git workflow for automatic deployment.
+
+![DB 2 Git](/images/git2db.png)
+
+### App to Git
+
+An application may choose to use the Tuttle application to synchronize their database collections to a Git repository and allow
+users without Git knowledge to version their documents. 
+
+![DB 2 Git](/images/app2git.png)
+
+In this case the application will use the Tuttle API to offer a custom integration into its user interface.
+
+

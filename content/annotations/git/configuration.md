@@ -5,6 +5,11 @@ date: 2020-12-11T20:35:42+01:00
 tags: ["git", "tuttle", "github","gitlab","configuration"]
 weight: 3
 ---
+
+If Tuttle is integrated within another application like e.g. TEI Publisher the configuration
+needs to be added to `modules/config.xqm` in the TEI Publisher instance.
+
+Otherwise for running Tuttle in 'Git to DB' mode 
 Tuttle is configured in `modules/config.xqm` in the TEI Publisher instance.
 
 Below is an example configuration that shows an example for either Github and Gitlab. Due to the 
