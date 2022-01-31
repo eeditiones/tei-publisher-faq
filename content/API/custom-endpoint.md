@@ -40,7 +40,9 @@ In the next section we learn how to create an endpoint to be used by a webcompon
 
 ### Adding an Endpoint to Browse Places
 
-Assume you have an edition in which all references to places are tagged. The references point to a central authority file containing further information on each place. In the simplest case this might be a separate TEI document with the list of places contained in `/TEI/standoff/listPlace`.
+Assume you have an edition in which all references to places are tagged. The references point to a central authority file containing further information on each place. In the simplest case this might be a separate TEI document with the list of places contained in `/TEI/standoff/listPlace`. An example (taken from the *Alfred Escher Briefedition*) is attached below.
+
+{{%attachments title="TEI Source" pattern=".*\.(xml)$"/%}}
 
 As an alternative entry point into the edition, we may want to provide users a page on which they can browse through all place names and see their location on a map. Since there might a large number of places, we ideally want to group them by first letter, plus provide a search feature for filtering. Fortunately, the `tei-publisher-components` library (since version 1.33.0) provides a webcomponent for this purpose: `pb-split-list`.
 
