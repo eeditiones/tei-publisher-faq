@@ -1,6 +1,7 @@
 +++
 title = "Word to TEI import"
 date = 2020-12-13
+chapter = true
 +++
 
 ## Word to TEI (docx2TEI) import facility

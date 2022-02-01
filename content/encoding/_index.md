@@ -2,6 +2,7 @@
 title = "Encoding"
 date = 2020-12-13
 weight = 1
+chapter = true
 +++
 
 ## Encoding issues
