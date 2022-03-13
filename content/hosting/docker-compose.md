@@ -80,6 +80,10 @@ Build the configuration once to make sure it works:
 docker compose build --build-arg ADMIN_PASS=my_pass
 ```
 
+{{% notice note %}}
+Depending on the version of docker compose installed on your system, the command to use may either be `docker compose` (as shown above) or `docker-compose`. Both work the same. So for the following sections, if we write `docker compose`, you may have to replace it with `docker-compose` on your machine (or server).
+{{% /notice %}}
+
 Afterwards you can launch the docker compose config locally to check if everything went fine:
 
 ```sh
