@@ -58,7 +58,7 @@ and run it locally to see if everything is ok:
 docker run -p 8081:8080 --name teiguidelines teiguidelines:latest
 ```
 
-If everything works, push the Dockerfile to your repository.
+If everything works, push the Dockerfile to your repository. For reference, the Dockerfile create for the TEI Guidelines using above steps is [available on github](https://github.com/eeditiones/tei-guidelines/blob/master/Dockerfile).
 
 ### 4. Fork the docker compose repository
 
