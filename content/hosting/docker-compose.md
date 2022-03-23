@@ -246,8 +246,8 @@ where `my_pass` should specify the password for the eXist admin user.
 
 Run the configuration once in order to obtain SSL certificates:
 
-```
-docker up -d
+```sh
+docker compose up -d
 ```
 
 Start the registration with the following command, making sure that you use the full name of your host in the `-d` parameter:
