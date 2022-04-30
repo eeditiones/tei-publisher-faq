@@ -49,3 +49,7 @@ Those files are the actual source files, which means you can use the browser's o
 ![Chrome debugger](/images/chrome-debug.png)
 
 You can also make changes to any of the source files in your clone of `tei-publisher-components` and - while `npm start` is running - changes will apply whenever you reload the page.
+
+### Update documentation
+
+If you added or changed component or properties description, you can update documentation using `npm run docs`.
