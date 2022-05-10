@@ -108,6 +108,14 @@ build:
     context: https://github.com/eeditiones/tei-guidelines.git#master
     dockerfile: Dockerfile
 ```
+#### 4.1 Access Dockerfile from private Git repository
+The following was only tested for Gitlab but should work the same for any private Git repository that provides access tokens. 
+
+In case tei-guidelines.git is hosted on a private Gitlab repository following steps are need to ensure Docker can acess it. 
+
+1. create a `Personal Access Token` for your Gitlab user and note it down (sample user here is `demo-user`
+1. adjust the `context` in `docker-compose.yml`: `context: https://demo-user:${GITLAB_TOKEN:-unset}@github.com/eeditiones/tei-guidelines.git#master` (do not(!) replace `${GITLAB_TOKEN:..}` but only the Gitlab username
+1. whenever you call `docker compose` later, make sure to prepend `GITLAB_USER=guideline-user GITLAB_TOKEN=<Your-Secrect-Token> docker compose` (replace `<Your-Secrect-Token>' with your personal access token password). 
 
 {{% notice note %}}
 Unless you are using TEI Publisher 8 (not released yet at time of writing) or a development build, you can also delete the entire `ner:` section from `docker-compose.yml`. The ner (named entity recognition) service is only used within the annotations editor, so you can also remove this if you do not plan to annotate documents.
@@ -314,5 +322,13 @@ For reference, you can also check my [final commit](https://github.com/wolfgangm
 
 ### 6. Final Steps
 
+#### Restart Services after Server reboot 
 Edit `docker-compose.yml` to make sure your service is automatically restarted if the server reboots. To do this, remove the comment around `restart: always`.
+
+#### Automated SSL Certificate Renewal 
+
+1. Edit `certbot-renew.sh`: adjust the value for `CERTFILE` and replace `example.com` with the DNS name of your server. Here: `CERTFILE=./certbot/conf/live/guidelines.tei-publisher.com/cert.pem`
+1. execute `certbot-renew.sh` to check if it works fine (should say:`Certificate still valid`)
+1. Create cron job: run `crontab -e` and then add the following line `59 18 * * * /path/to/docker-compose/certbot-renew.sh`. Check afterwards with `crontab -l` if the line was really added. 
+1. reboot your server. You can check with `docker compose ls` if your docker containers are running fine afterwards and you should be able to access your app via the new created DNS name of your server. 
 
