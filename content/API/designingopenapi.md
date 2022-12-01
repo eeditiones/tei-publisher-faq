@@ -21,8 +21,9 @@ Example of two reusable components:
 - `DictionaryIdParameter` is a parameter used in URL path; schema of this parameter is the same as for `XmlId`. The definition is used in the next example.
 
 ```json
-"components": { 
-    "schemas": {
+{
+    "components": { 
+        "schemas": {
             "XmlId": {
                 "description": "A unique and human readable id",
                 "type": "string",
@@ -30,8 +31,8 @@ Example of two reusable components:
                 "minLength": 4,
                 "maxLength": 80
             }
-    },
-    "parameters": {
+        },
+        "parameters": {
             "DictionaryIdParameter": {
                 "name": "id",
                 "in": "path",
@@ -42,6 +43,7 @@ Example of two reusable components:
                 },
                 "example": "FACS"
             }
+        }
     }
 }
 ```
@@ -49,20 +51,20 @@ Example of two reusable components:
 Example of referencing a parameter called `id`, used within the URL path.
 
 ```json
-"paths": {
-    "/lex/dictionaries/{id}/entries": {
-        "get": {
-            "summary": "Browse through collection of entries within a dictionary.",
-            "operationId": "lapi:dictionary-entries",
-            "tags": [
-                "browse",
-                "search"
-            ],
-            "parameters": [
-                {
-                    "$ref": "#/components/parameters/DictionaryIdParameter"
-                }
-            ]
+{
+    "paths": {
+        "/lex/dictionaries/{id}/entries": {
+            "get": {
+                "summary": "Browse through collection of entries within a dictionary.",
+                "operationId": "lapi:dictionary-entries",
+                "tags": [
+                    "browse",
+                    "search"
+                ],
+                "parameters": [
+                    { "$ref": "#/components/parameters/DictionaryIdParameter" }
+                ]
+            }
         }
     }
 }
@@ -95,9 +97,9 @@ Example of referencing a parameter called `id`, used within the URL path.
 After proceeding with these steps, the above example will look like this:
 
 ```json
-
-"components": { 
-    "schemas": {
+{
+    "components": { 
+        "schemas": {
             "XmlId": {
                 "description": "A unique and human readable id",
                 "type": "string",
@@ -105,50 +107,51 @@ After proceeding with these steps, the above example will look like this:
                 "minLength": 4,
                 "maxLength": 80
             }
-    },
-    "parameters": {
-        "DictionaryIdParameter": {
-            "name": "id",
-            "in": "path",
-            "description": "Identifier for a dictionary. Value of an `@xml:id` attribute of the `<TEI>` element.",
-            "required": true,
-            "schema": {
-            "description": "A unique and human readable id",
-            "type": "string",
-            "pattern": "[a-zA-Z0-9-.]*",
-            "minLength": 4,
-            "maxLength": 80
-            },
-            "example": "FACS"
+        },
+        "parameters": {
+            "DictionaryIdParameter": {
+                "name": "id",
+                "in": "path",
+                "description": "Identifier for a dictionary. Value of an `@xml:id` attribute of the `<TEI>` element.",
+                "required": true,
+                "schema": {
+                    "description": "A unique and human readable id",
+                    "type": "string",
+                    "pattern": "[a-zA-Z0-9-.]*",
+                    "minLength": 4,
+                    "maxLength": 80
+                },
+                "example": "FACS"
+            }
         }
-    }
-},
-"paths": {
-"/lex/dictionaries/{id}/entries": {
-      "get": {
-        "summary": "Browse through collection of entries within a dictionary.",
-        "operationId": "lapi:dictionary-entries",
-        "tags": [
-          "browse",
-          "search"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Identifier for a dictionary. Value of an `@xml:id` attribute of the `<TEI>` element.",
-            "required": true,
-            "schema": {
-              "description": "A unique and human readable id",
-              "type": "string",
-              "pattern": "[a-zA-Z0-9-.]*",
-              "minLength": 4,
-              "maxLength": 80
-            },
-            "example": "FACS"
-          }
-        ]
-      }
+    },
+    "paths": {
+        "/lex/dictionaries/{id}/entries": {
+            "get": {
+                "summary": "Browse through collection of entries within a dictionary.",
+                "operationId": "lapi:dictionary-entries",
+                "tags": [
+                    "browse",
+                    "search"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Identifier for a dictionary. Value of an `@xml:id` attribute of the `<TEI>` element.",
+                        "required": true,
+                        "schema": {
+                            "description": "A unique and human readable id",
+                            "type": "string",
+                            "pattern": "[a-zA-Z0-9-.]*",
+                            "minLength": 4,
+                            "maxLength": 80
+                        },
+                        "example": "FACS"
+                    }
+                ]
+            }
+        }
     }
 }
 ```
