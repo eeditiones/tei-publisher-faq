@@ -89,8 +89,8 @@ Example of referencing a parameter called `id`, used within the URL path.
 - create the first version of your OpenAPI specification, or edit existing one
 - save updated file on the disk (either outside of the repository of your TEI Publisher's app or with a different name than `custom-api.json`), let's say `draft-api.json`
 - form command line run (works on Windows) `%APPDATA%/npm/swagger-cli bundle -o .\draft-api.json --dereference ./modules/custom-api.json`
-  - [`--defference`] switch is crucial in this case
-- upload `custo-api.json` on the eXist-db server, for example using [`existdb-vscode`](https://marketplace.visualstudio.com/items?itemName=eXist-db.existdb-vscode) extension for [`Visual Studio Code`](https://code.visualstudio.com/download)
+  - [`--dereference`] switch is crucial in this case
+- upload `custom-api.json` on the eXist-db server, for example using [`existdb-vscode`](https://marketplace.visualstudio.com/items?itemName=eXist-db.existdb-vscode) extension for [`Visual Studio Code`](https://code.visualstudio.com/download)
 
 After proceeding with these steps, the above example will look like this:
 
