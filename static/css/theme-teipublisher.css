@@ -135,3 +135,31 @@ a:hover {
 .summary header h4 {
     margin-top: 0;
 }
+
+article div{
+    font-size: 1.2rem;
+}
+
+p{
+    font-size: 1.4rem;
+}
+
+[data-url="/git/tuttle/"] img{
+    border-radius:50%;
+}
+th:nth-child(1){
+    width: 20%;
+}
+
+[data-url="/git/usecases/"] tr:nth-child(1) td:nth-child(1){
+    background: rgb(255, 193, 7);
+    color:white;
+}
+[data-url="/git/usecases/"] tr:nth-child(2) td:nth-child(1){
+    background: rgb(76, 175, 80);
+    color:white;
+}
+[data-url="/git/usecases/"] tr:nth-child(3) td:nth-child(1){
+    background: rgb(244, 67, 54);
+    color:white;
+}
